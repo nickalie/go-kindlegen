@@ -4,12 +4,9 @@ jobs:
     working_directory: /go/src/github.com/nickalie/go-kindlegen
     docker:
       - image: golang
-    environment:
-      - PATH: /kindlegen:$PATH
     steps:
       - run: |
-          mkdir /kindlegen
-          cd /kindlegen
+          cd /usr/bin
           wget http://kindlegen.s3.amazonaws.com/kindlegen_linux_2.6_i386_v2_9.tar.gz
           tar -xvzf kindlegen_linux_2.6_i386_v2_9.tar.gz
           rm kindlegen_linux_2.6_i386_v2_9.tar.gz
