@@ -4,7 +4,7 @@ import (
 	"github.com/nickalie/go-binwrapper"
 	"strings"
 	"sync"
-	"errors"
+	"github.com/pkg/errors"
 )
 
 var pool = sync.Pool{
@@ -24,7 +24,7 @@ func Convert(source, target string) error {
 			return nil
 		}
 
-		return errors.New(string(b.CombinedOutput()) + "\n" + err.Error())
+		return errors.Wrap(err, string(b.CombinedOutput()))
 	}
 
 	return nil
