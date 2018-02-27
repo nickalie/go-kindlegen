@@ -1,4 +1,5 @@
 .idea
 *.iml
-source.epub
-target.mobi
+*.epub
+*.mobi
+*.zip
