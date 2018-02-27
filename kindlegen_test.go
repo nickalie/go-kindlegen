@@ -10,7 +10,7 @@ import (
 )
 
 func init() {
-	downloadFile("https://www.gutenberg.org/ebooks/2600.epub.images?session_id=6326d908280f40b489a0b3be7a2653349aa8774d", "source.epub")
+	//downloadFile("https://www.gutenberg.org/ebooks/2600.epub.images?session_id=6326d908280f40b489a0b3be7a2653349aa8774d", "source.epub")
 }
 
 func downloadFile(url, target string) {
@@ -45,4 +45,9 @@ func downloadFile(url, target string) {
 func TestConvert(t *testing.T) {
 	err := Convert("source.epub", "target.mobi")
 	assert.Nil(t, err)
+}
+
+func TestConvertError(t *testing.T) {
+	err := Convert("source2.epub", "target3.mobi")
+	assert.NotNil(t, err)
 }
