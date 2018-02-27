@@ -10,7 +10,7 @@ import (
 )
 
 func init() {
-	//downloadFile("https://www.gutenberg.org/ebooks/2600.epub.images?session_id=6326d908280f40b489a0b3be7a2653349aa8774d", "source.epub")
+	downloadFile("https://www.gutenberg.org/ebooks/2600.epub.images?session_id=6326d908280f40b489a0b3be7a2653349aa8774d", "source.epub")
 }
 
 func downloadFile(url, target string) {
